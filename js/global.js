@@ -213,6 +213,7 @@ $(document).on('mousewheel DOMMouseScroll', function(e){
 
     e.preventDefault();
 });
+$(docunment).on('touchstart touchmove',handleTouchEvent(e));
 $(document).ready(function(){
 	$('a[href="#"]').click(function (e) {
 		// body...
