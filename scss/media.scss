@@ -1,0 +1,18 @@
+@media only screen and (max-height: 1024px) and (min-height: 760px){
+		
+	.section-firstpage .fade2{
+		margin-top:200px;
+	}
+}
+@media only screen and (max-height: 760px){
+
+	.section-firstpage .fade2{
+		margin-top:60px;
+	}
+	.about-content .right{
+		position: absolute;
+		top: 5%;
+		left: 40%;
+
+	}
+}

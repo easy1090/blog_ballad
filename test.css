@@ -1,0 +1,34 @@
+/* body{
+	overflow: hidden;
+}
+.overlay{
+	background: #342929;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	opacity: 1;
+	display: block;
+	//@include transition(opacity,0.4s,ease-in);
+} */
+/* .loading-process{
+	.overlay{
+		display: block;
+	}
+}
+
+.finish-loading{
+	.overlay{
+		opacity: 0;
+	}
+} */
+.loading{
+	padding: 100px;
+	margin: 100px;
+	width:120px;
+	height:120px;
+	z-index: 10;
+}
