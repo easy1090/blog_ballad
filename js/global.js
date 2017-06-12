@@ -57,7 +57,25 @@ Global.fadeInByOrder = function(selector,interval,callback){
 	)();
 };
 
+Global.handleTouchEvent = function(event){
+    if (event.touches.length == 1) {
 
+        var touchStartY,
+            touchMoveY;
+
+        switch (event.type) {
+            case "touchstart":
+                touchStartY =  event.touches[0].clientY;
+                break;
+            case "touchmove":
+                touchMoveY  =  event.changedTouches[0].clientY;
+                break;
+        }
+        Global.scrollHandle( touchStartY > touchMoveY ? true : false );
+
+    }
+    event.preventDefault();
+};
 Global.fixedbg = function(){
     var slide_rate = 1000 / 667,
         window_rate;
@@ -242,6 +260,7 @@ $(document).ready(function(){
             Global.isScrolling = true;
             $('html,body').animate({scrollTop: Global.targetScrollTop(++Global.section_num)}, 400,function(){
                 Global.isScrolling = false;
+		$('.nav .fade1').addClass('hover');
             });
             if ( Global.section_num > 1 ) {
                 Global.shrinkHeader(true);
