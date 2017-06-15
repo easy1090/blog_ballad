@@ -195,6 +195,17 @@ window.onscroll=Global.throttle(function(){
 	Global.fadeInByOrder(fadeIntarget,200);
 
 },50);
+$(document).swipe(
+ {
+ swipe:function(event, direction, distance, duration, fingerCount) {
+ if(direction == "up"){
+  Global.scrollHandle(false);
+ }else if(direction == "down"){
+Global.scrollHandle(true);
+ }
+
+}});
+
 $(document).on('mousewheel DOMMouseScroll', function(e){
     var e0 = e.originalEvent,
         delta = e0.wheelDelta || -e0.detail,
