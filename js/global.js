@@ -214,11 +214,11 @@ $(document).on('mousewheel DOMMouseScroll', function(e){
     //处理好上下元素数组，开始滚动
     if (isMouseScrollDown) { //鼠标向下滚动
 
-        Global.scrollHandle(true);
+        Global.scrollHandle(false);
 
     }else{
 
-        Global.scrollHandle(false);
+        Global.scrollHandle(true);
 
     }
 
