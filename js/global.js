@@ -224,7 +224,16 @@ $(document).on('mousewheel DOMMouseScroll', function(e){
 
     e.preventDefault();
 });
-$(docunment).on('touchstart touchmove',Global.handleTouchEvent(e));
+$(document).swipe(
+ {
+ swipe:function(event, direction, distance, duration, fingerCount) {
+ if(direction == "up"){
+  Global.scrollHandle(false);
+ }else if(direction == "down"){
+Global.scrollHandle(true);
+ }
+
+}});
 $(document).ready(function(){
 	$('a[href="#"]').click(function (e) {
 		// body...
