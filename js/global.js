@@ -214,11 +214,11 @@ $(document).on('mousewheel DOMMouseScroll', function(e){
     //处理好上下元素数组，开始滚动
     if (isMouseScrollDown) { //鼠标向下滚动
 
-        Global.scrollHandle(false);
+        Global.scrollHandle(true);
 
     }else{
 
-        Global.scrollHandle(true);
+        Global.scrollHandle(false);
 
     }
 
@@ -228,9 +228,9 @@ $(document).swipe(
  {
  swipe:function(event, direction, distance, duration, fingerCount) {
  if(direction == "up"){
-  Global.scrollHandle(false);
+  Global.scrollHandle(true);
  }else if(direction == "down"){
-Global.scrollHandle(true);
+Global.scrollHandle(false);
  }
 
 }});
