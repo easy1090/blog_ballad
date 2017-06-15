@@ -217,7 +217,9 @@ strong {
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
-	margin: 0 auto;
+	position: absolute;
+	top: 130%;
+	width: 160%;
 	@include transition(all,0.4s,ease-in);
 	
 	animation: spin 1s infinite linear;
